@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/default_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/statusCircle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/view_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile"
+        app:layout_constraintTop_toTopOf="@+id/userProfile"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Ashok Thombre"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+        app:layout_constraintStart_toEndOf="@+id/userProfile"
+        app:layout_constraintTop_toTopOf="@+id/userProfile"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Traveler"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userProfile"
+        app:srcCompat="@drawable/dots" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/addPost"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="8dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile"
+        app:riv_corner_radius="10dip"
+        app:riv_mutate_background="true" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addPost"
+        app:srcCompat="@drawable/save" />
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/like"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="354"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPost" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/comment"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="354"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/like"
+        app:layout_constraintTop_toBottomOf="@+id/addPost" />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/sharepost"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="254"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/comment"
+        app:layout_constraintTop_toBottomOf="@+id/addPost" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#807E7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Description"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/like" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
