@@ -69,6 +69,7 @@ public class FollowersActivity extends AppCompatActivity {
                         for (DataSnapshot dataSnapshot:snapshot.getChildren())
                         {
                             FriendModel model=dataSnapshot.getValue(FriendModel.class);
+                            model.setFollowedBy(dataSnapshot.getKey());
                             list.add(model);
 
                         }
